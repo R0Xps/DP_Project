@@ -1,12 +1,12 @@
 package features;
 
-import shirts.Shirt;
+import shirts.TShirt;
 
-public abstract class Feature extends Shirt {
-    Shirt shirt;
+public abstract class Feature extends TShirt {
+    TShirt tShirt;
 
-    public Feature(Shirt shirt) {
-        this.shirt = shirt;
+    public Feature(TShirt tShirt) {
+        this.tShirt = tShirt;
     }
 
     @Override
@@ -14,6 +14,6 @@ public abstract class Feature extends Shirt {
 
     @Override
     public void formSize() {
-        shirt.formSize();
+        tShirt.formSize();
     }
 }

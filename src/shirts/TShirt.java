@@ -1,10 +1,10 @@
 package shirts;
 
-public abstract class Shirt {
+public abstract class TShirt {
     private String name;
     private String description;
 
-    public Shirt() {
+    public TShirt() {
         name = "Regular T-Shirt";
         description = "Regular T-Shirt that comes in many sizes";
     }

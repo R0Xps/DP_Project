@@ -10,9 +10,8 @@ public class ShopOwner implements Observer {
     }
 
     @Override
-    public void update(Object arg) {
-        String size = (String) arg;
-        sales.put(size, sales.getOrDefault(size, 0) + 1);
+    public void update(String arg) {
+        sales.put(arg, sales.getOrDefault(arg, 0) + 1);
     }
 
     public void printSales() {

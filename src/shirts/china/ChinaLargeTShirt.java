@@ -1,8 +1,8 @@
 package shirts.china;
 
-import shirts.Shirt;
+import shirts.TShirt;
 
-public class ChinaLargeShirt extends Shirt {
+public class ChinaLargeTShirt extends TShirt {
 
     @Override
     public void formSize() {

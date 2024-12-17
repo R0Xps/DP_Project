@@ -1,15 +1,15 @@
 package features;
 
-import shirts.Shirt;
+import shirts.TShirt;
 
 public class LogoFeature extends Feature {
 
-    public LogoFeature(Shirt shirt) {
-        super(shirt);
+    public LogoFeature(TShirt tShirt) {
+        super(tShirt);
     }
 
     @Override
     public String getDescription() {
-        return shirt.getDescription() + ", with bird logo";
+        return tShirt.getDescription() + ", with bird logo";
     }
 }

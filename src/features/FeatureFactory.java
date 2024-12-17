@@ -1,14 +1,14 @@
 package features;
 
-import shirts.Shirt;
+import shirts.TShirt;
 
 public class FeatureFactory {
-    public Feature createFeature(String feature, Shirt shirt) {
+    public Feature createFeature(String feature, TShirt tShirt) {
         return switch (feature) {
-            case "logo" -> new LogoFeature(shirt);
-            case "text" -> new TextFeature(shirt);
-            case "color_red" -> new RedColorFeature(shirt);
-            case "color_blue" -> new BlueColorFeature(shirt);
+            case "logo" -> new LogoFeature(tShirt);
+            case "text" -> new TextFeature(tShirt);
+            case "color_red" -> new ColorFeature(tShirt, Color.RED);
+            case "color_blue" -> new ColorFeature(tShirt, Color.BLUE);
             default -> throw new IllegalArgumentException("Unrecognized feature: " + feature);
         };
     }
