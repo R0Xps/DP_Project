@@ -3,9 +3,11 @@ import java.util.Map;
 
 public class ShopOwner implements Observer {
     Map<String, Integer> sales;
+    TShirtShop shop;
 
-    public ShopOwner(Subject s) {
+    public ShopOwner(TShirtShop s) {
         s.addObserver(this);
+        shop = s;
         sales = new HashMap<>();
     }
 

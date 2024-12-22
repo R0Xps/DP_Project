@@ -68,7 +68,6 @@ public class Main {
                     case 2 -> feature = "text";
                     case 3 -> feature = "color_red";
                     case 4 -> feature = "color_blue";
-
                 }
 
                 features.add(feature);
