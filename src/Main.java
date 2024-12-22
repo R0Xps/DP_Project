@@ -1,6 +1,7 @@
-import features.FeatureFactory;
 import shirts.TShirt;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -24,6 +25,7 @@ public class Main {
     }
 
     static void simulateOrder() {
+        Customer customer = new Customer();
         String region = "none";
         String size = "none";
         int choice = -1;
@@ -49,8 +51,7 @@ public class Main {
             case 3 -> size = "large";
         }
 
-        TShirt tShirt = shop.order(region, size);
-        FeatureFactory featureFactory = new FeatureFactory();
+        List<String> features = new ArrayList<>();
         choice = -1;
         while (choice != 2) {
             System.out.println("Would you like to add any more features to your t-shirt?\n[1] Yes\n[2] No");
@@ -68,9 +69,11 @@ public class Main {
                     case 3 -> feature = "color_red";
                     case 4 -> feature = "color_blue";
                 }
-                tShirt = featureFactory.createFeature(feature, tShirt);
+
+                features.add(feature);
             }
         }
+        TShirt tShirt = customer.order(region, size, features);
         System.out.println(tShirt.getDescription());
         tShirt.formSize();
     }
